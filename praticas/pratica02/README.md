@@ -1,4 +1,4 @@
-# 💻 Prática 02: Criar o Projeto e Explorar a Estrutura
+npx create-expo-app@latest# 💻 Prática 02: Criar o Projeto e Explorar a Estrutura
 
 Agora você vai **criar o projeto Expo desta prática**, abrir os arquivos gerados e provar que entendeu a anatomia do app — alterando a tela com `View` e `Text` de forma consciente.
 
