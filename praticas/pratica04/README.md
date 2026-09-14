@@ -72,7 +72,7 @@ No `TextInput`:
 2. Delete a do meio.
 3. Confirme que o input limpa após adicionar.
 4. (Esperado) Com muitas tarefas, a tela **pode não rolar bem** — isso será resolvido na próxima aula com `FlatList`.
-
+cd 
 ---
 
 ## ✅ Critérios de entrega
