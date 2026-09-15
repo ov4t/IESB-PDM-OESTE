@@ -17,14 +17,10 @@ import MetaList from './components/MetaList';
 const STORAGE_KEY = '@metas_semestre';
 
 export default function App() {
-  // ---- ESTADO -------------------------------------------------------
   const [texto, setTexto] = useState('');
   const [metas, setMetas] = useState([]);
   const [carregando, setCarregando] = useState(true);
 
-  // ---- 1) useEffect DE CARGA -----------------------------------------
-  // Roda uma única vez, na montagem do componente ([] como dependência).
-  // Lê a string salva no AsyncStorage, faz JSON.parse e popula o estado.
   useEffect(() => {
     async function carregarMetas() {
       try {
@@ -46,10 +42,6 @@ export default function App() {
     carregarMetas();
   }, []);
 
-  // ---- 2) useEffect DE SALVAMENTO -------------------------------------
-  // Roda toda vez que o array "metas" muda (dependência [metas]).
-  // Evita salvar durante o carregamento inicial (que também dispararia
-  // esse efeito, sobrescrevendo os dados antes da leitura terminar).
   useEffect(() => {
     if (carregando) return;
 
@@ -68,7 +60,6 @@ export default function App() {
     salvarMetas();
   }, [metas, carregando]);
 
-  // ---- EVENTOS --------------------------------------------------------
   function handleAdicionar() {
     const textoLimpo = texto.trim();
 
@@ -84,7 +75,6 @@ export default function App() {
       concluida: false,
     };
 
-    // Nunca mutar o array existente: sempre criar um novo com spread.
     setMetas((metasAtuais) => [novaMeta, ...metasAtuais]);
     setTexto('');
   }
@@ -101,7 +91,6 @@ export default function App() {
     );
   }
 
-  // ---- CONTADOR (desafio opcional) ------------------------------------
   const pendentes = metas.filter((m) => !m.concluida).length;
   const concluidas = metas.filter((m) => m.concluida).length;
 
@@ -114,7 +103,7 @@ export default function App() {
         >
           <View style={styles.header}>
             <Image
-              source={require('./assets/icon.png')}
+              source={require('./assets/livro.png')}
               style={styles.headerIcon}
             />
             <View>
@@ -153,6 +142,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     paddingHorizontal: 16,
     paddingVertical: 16,
     gap: 12,
@@ -166,10 +156,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '700',
     color: '#1f2933',
+    textAlign: 'center',
   },
   headerSubtitle: {
     fontSize: 13,
     color: '#6b7280',
     marginTop: 2,
+    textAlign: 'center',
   },
 });

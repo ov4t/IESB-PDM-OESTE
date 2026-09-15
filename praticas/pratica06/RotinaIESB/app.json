@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "RotinaIESB",
+    "slug": "RotinaIESB",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/IESBIcon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android.png",
+        "backgroundImage": "./assets/android.png",
+        "monochromeImage": "./assets/android.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/IESBIcon.png"
+    }
+  }
+}

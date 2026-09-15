@@ -1,0 +1,15 @@
+export const tituloApp = 'Rotina IESB';
+export const subtituloApp = 'Organize sua rotina acadêmica';
+export const placeholderCompromisso = 'Ex: Aula de Redes às 19h...';
+export const botaoAdicionar = 'Adicionar';
+export const tituloLista = 'Meus Compromissos';
+export const listaVazia = 'Nenhum compromisso cadastrado ainda.';
+export const pendentesLabel = 'pendentes';
+export const alertaVazioTitulo = 'Campo vazio';
+export const alertaVazioMensagem = 'Digite um compromisso antes de adicionar.';
+export const erroCarregarTitulo = 'Erro ao carregar';
+export const erroCarregarMensagem = 'Não foi possível carregar seus compromissos salvos.';
+export const erroSalvarTitulo = 'Erro ao salvar';
+export const erroSalvarMensagem = 'Não foi possível salvar seus compromissos.';
+export const botaoRemoverAcessibilidade = 'Remover compromisso';
+export const botaoConcluirAcessibilidade = 'Marcar como concluído';
